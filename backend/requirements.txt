@@ -1,0 +1,85 @@
+# Web Framework
+Flask==3.0.0
+Flask-CORS==4.0.0
+Flask-RESTful==0.3.10
+
+# Image Processing and Computer Vision
+opencv-python==4.8.1.78
+Pillow==10.1.0
+scikit-image==0.22.0
+imageio==2.33.1
+
+# Machine Learning and Deep Learning
+tensorflow==2.15.0
+torch==2.1.2
+torchvision==0.16.2
+scikit-learn==1.3.2
+numpy==1.24.3
+pandas==2.1.4
+
+# Medical Image Analysis
+pydicom==2.4.4
+SimpleITK==2.3.1
+nibabel==5.1.0
+
+# Data Processing and Visualization
+matplotlib==3.8.2
+seaborn==0.13.0
+plotly==5.17.0
+
+# Database and Storage
+SQLAlchemy==2.0.23
+Flask-SQLAlchemy==3.1.1
+psycopg2-binary==2.9.9
+redis==5.0.1
+
+# API and Serialization
+marshmallow==3.20.2
+Flask-Marshmallow==0.15.0
+marshmallow-sqlalchemy==0.29.0
+
+# Authentication and Security
+Flask-JWT-Extended==4.6.0
+bcrypt==4.1.2
+cryptography==41.0.8
+
+# File Upload and Processing
+Werkzeug==3.0.1
+python-multipart==0.0.6
+
+# Configuration and Environment
+python-dotenv==1.0.0
+configparser==6.0.0
+
+# Logging and Monitoring
+loguru==0.7.2
+Flask-Logging==0.1.0
+
+# Testing
+pytest==7.4.3
+pytest-flask==1.3.0
+pytest-cov==4.1.0
+
+# Development Tools
+black==23.11.0
+flake8==6.1.0
+isort==5.12.0
+
+# Medical AI Specific Libraries
+medpy==0.4.0
+pydicom-seg==0.4.0
+pydicom-contrib==0.2.1
+
+# Image Augmentation
+albumentations==1.3.1
+imgaug==0.4.0
+
+# Model Serving and Optimization
+onnx==1.15.0
+onnxruntime==1.16.3
+tensorflow-serving-api==2.15.0
+
+# Utilities
+tqdm==4.66.1
+requests==2.31.0
+urllib3==2.1.0

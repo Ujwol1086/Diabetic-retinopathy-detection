@@ -1,12 +1,103 @@
-# React + Vite
+# Early Disease Detection Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight React frontend for the Early Disease Detection System that integrates with backend APIs.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Disease Detection**: AI-powered analysis of patient data for early disease detection
+- **Screening Center**: Automated health screening and risk assessment
+- **API Integration**: Clean, typed API service for backend communication
 
-## Expanding the ESLint configuration
+## API Endpoints
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The frontend expects the following backend API endpoints:
+
+### Disease Detection
+- **POST** `/api/detect-disease`
+  - **Body**: `PatientData`
+  - **Response**: `DetectionResult`
+
+### Screening
+- **POST** `/api/screening`
+  - **Body**: `ScreeningRequest`
+  - **Response**: `ScreeningResult`
+
+### Health Check
+- **GET** `/api/health`
+  - **Response**: Health status
+
+## Data Types
+
+### PatientData
+```typescript
+{
+  age: string
+  gender: string
+  symptoms: string
+  medicalHistory: string
+  testResults: string
+}
+```
+
+### DetectionResult
+```typescript
+{
+  disease: string
+  confidence: number
+  risk_level: string
+  recommendations: string[]
+}
+```
+
+### ScreeningRequest
+```typescript
+{
+  test_type: string
+}
+```
+
+### ScreeningResult
+```typescript
+{
+  test_type: string
+  status: string
+  risk_score: number
+  findings: string[]
+  next_steps: string[]
+}
+```
+
+## Environment Variables
+
+Set the backend API URL:
+```bash
+VITE_API_URL=http://localhost:5000
+```
+
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── DiseaseDetection.tsx    # Main disease detection interface
+│   ├── ScreeningCenter.tsx     # Health screening interface
+│   ├── Navigation.tsx          # Simple navigation
+│   └── ui/                     # Reusable UI components
+├── services/
+│   └── api.ts                  # API service layer
+├── App.tsx                     # Main application
+└── main.tsx                    # Application entry point
+```
